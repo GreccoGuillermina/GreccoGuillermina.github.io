@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ccc7b9;
+}
+
+/**Primer Header*/
+.header {
+  margin: 0 auto;
+  box-shadow: 0 2px 3px #bab3a0;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-color: #204b57;
+  width: 100%;
+}
+
+/**Barra*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+}
+
+.logo {
+  color: #bab3a0;
+  font-family: "Great Vibes", cursive;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 60px;
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0 10px;
+  margin-right: 8%;
+  font-weight: 500;
+  width: max-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: #16333b;
+  transition: 0.5s;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ccc7b9;
+  font-family: "Caveat", cursive;
+  text-shadow: 2px 2px 2px #11272d;
+  line-height: 50px;
+  font-size: 25px;
+}
+
+/**responsive*/
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+/**Segundo Header*/
+.segundoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #204b57;
+  width: 100%;
+}
+
+.segundoHeader img {
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px #11272d;
+  margin-left: 5%;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8%;
+  color: #ccc7b9;
+}
+
+.segundoHeader #info h1 {
+  font-family: "Great Vibes", cursive;
+  margin: 2%;
+  padding: 2%;
+  font-weight: 100;
+  font-size: 50px;
+  padding-bottom: 0;
+}
+
+.segundoHeader #info h3 {
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.segundoHeader #info p {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  margin: 1%;
+  padding: 0% 20%;
+}
+
+/**main*/
+main {
+  color: #0b1a1e;
+}
+
+div {
+  padding: 2% 2%;
+}
+
+main article section#formacion,
+section#experiencia,
+section#aptitudes {
+  display: flex;
+  justify-content: baseline;
+  margin-left: 5%;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+}
+
+main article section#idiomas {
+  margin: 2% 15%;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+article h2 {
+  padding: 2%;
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 3px;
+  background-color: #0b1a1e;
+  margin-left: 18%;
+}
+
+article h5 {
+  font-size: 15px;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article p {
+  padding: 2% 2%;
+}
+
+article li {
+  padding: 1%;
+}
+
+/**Footer*/
+footer ul {
+  display: flex;
+  list-style: none;
+  margin: 1%;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+footer ul li {
+  font-weight: 500;
+  color: #0b1a1e;
+  padding-right: 2%;
+  padding-left: 1%;
+}
+
+/**media query*/
+@media (max-width: 926px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    background-color: #16333b;
+    height: 30%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .menu li {
+    width: 30%;
+    box-shadow: 5px 5px 5px #0b1a1e;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+
+  .menu a {
+    color: #ccc7b9;
+    text-shadow: 2px 2px 2px #11272d;
+    line-height: 10px;
+    font-size: 25px;
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .cerrar-menu {
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+    padding: 25px 30px;
+  }
+
+  .menu_abierto {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /**Segundo Header*/
+  .segundoHeader {
+    display: block;
+    background-color: #204b57;
+  }
+
+  .segundoHeader img {
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px #11272d;
+    margin-left: 20%;
+  }
+
+  .segundoHeader#info {
+    display: block;
+  }
+
+  .segundoHeader#info p {
+    padding: 1% 10%;
+  }
+
+  /**main*/
+  main {
+    color: #0b1a1e;
+  }
+
+  div {
+    padding: 2% 0;
+  }
+
+  main article section#formacion,
+  section#experiencia,
+  section#aptitudes {
+    display: block;
+    justify-content: baseline;
+    margin-left: 10%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+  }
+
+  article h2 {
+    font-family: "Caveat", cursive;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+
+  /**Footer*/
+  footer ul {
+    display: block;
+  }
+}
